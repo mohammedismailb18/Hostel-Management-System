@@ -1,0 +1,64 @@
+body {
+    background-color: #4b5d67;
+}
+
+/**************** navigation bar *******************/
+
+.brand {
+    font-weight: 600;
+    margin-left: 10px;
+  }
+
+  .navbar-nav > li{
+    padding-left:40px;
+    padding-right:40px;
+    color: blue;
+  }
+
+  .logo-image {
+    padding-left:20px;
+    padding-right:20px;
+  }
+/*******************/
+
+  .register {
+    background-color: rgb(248, 248, 248);
+    margin: 50px auto 50px;
+    padding: 30px 40px 20px;
+    border-radius: 5px;
+    width: 70%;
+}
+
+h4 {
+  text-align: left;
+  padding-bottom: 10px; 
+}
+
+table {
+  border-collapse: collapse;
+  width: 90%;
+  font-family: monospace;
+  font-size: 18px;
+  text-align: left;
+  margin-top: 40px;
+
+}
+
+th{
+  background-color: #d96459;
+  color: white;
+  text-align: center;
+}
+
+tr {
+  background-color: white;
+  text-align: center;
+}
+
+.person-insert {
+  background-color: rgb(248, 248, 248);
+    margin: 50px auto 50px;
+    padding: 30px 40px 20px;
+    border-radius: 5px;
+    width: 55%;
+}
