@@ -45,7 +45,8 @@
                                     <input type="password" name="Password" placeholder="Password" required="">
                                 </div>
                                 <button class="btn btn-style mt-3">Login </button>
-                                <p class="already">Login as <a href="#signin">Hostel Manager/Admin</a></p>
+                                <p class="already" style="margin-bottom : -25px; text-align: center;">Login as <a href="#signin">Admin</a></p>
+                                <p class="already">Login as <a href="#signin">Hostel Manager</a></p>
                                 <p class="already" style="margin-top : -1px; text-align: center;">Don't have an account? <a href="#signin">Sign up</a></p>
                             </form>
                         </div>
