@@ -13,7 +13,7 @@
             </div>
 
             <div class="col-md-6">
-                <button type="submit" name="contact-button"  class="btn-lg btn-primary" style="margin-top:10px;">Submit</button>
+                <button type="submit" name="contact-button"  class="btn-md btn-primary" style="margin-top:10px;  padding: 5px 25px 5px;">Submit</button>
             </div>
         </div>
     </form>
@@ -36,7 +36,7 @@
     </table>
 
     <div class="col-md-6">
-                <button type="submit" name="contact-button"  class="btn-lg btn-primary" style="margin-top:10px;">Confirm Allocation</button>
+                <button type="submit" name="contact-button"  class="btn-md btn-primary" style="margin-top:10px; margin-left: -10px; padding: 8px 25px 8px;">Confirm Allocation</button>
             </div>
     
 </div>

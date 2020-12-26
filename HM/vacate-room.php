@@ -16,7 +16,7 @@
 
            
             <div class="col-md-10" style="padding-left: 540px;">
-            <button type="submit" name="contact-button"  class="btn-lg btn-primary" style="margin-top:10px;">Submit</button>
+            <button type="submit" name="contact-button"  class="btn-lg btn-primary" style="margin: 8px auto 0px;; padding: 3px 25px 3px;">Submit</button>
             </div>
         </div>
     </form>
