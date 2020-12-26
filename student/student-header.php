@@ -14,8 +14,11 @@ Author URL: http://w3layouts.com
     <link href="assets/css/student-font.css" rel="stylesheet">
 
     <!-- Template CSS -->
+    <link rel="stylesheet" href="assets/css/profile-css.css">
     <link rel="stylesheet" href="assets/css/style-starter.css">
     <link rel="stylesheet" href="assets/css/styles-nav.css">
+
+
   </head>
   <body>
     <div style = "height: 75px;"> 
@@ -43,7 +46,7 @@ Author URL: http://w3layouts.com
                   </a>
                   <ul class="dropdown-menu agile_short_dropdown">
                     <li>
-                      <a href="profile.php">My Profile</a>
+                      <a href="student-profile.php">My Profile</a>
                     </li>
                     <li>
                       <a href="includes/logout.inc.php">Logout</a>
