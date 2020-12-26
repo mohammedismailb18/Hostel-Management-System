@@ -39,7 +39,7 @@
                         <div class="login-form-content">
                             <form action="#" class="signin-form" method="post">
                                 <div class="one-frm">
-                                    <input type="email" name="Email" placeholder="Email" required="" autofocus>
+                                    <input type="text" name="Roll_No" placeholder="Roll No" required="" autofocus>
                                 </div>
                                 <div class="one-frm">
                                     <input type="password" name="Password" placeholder="Password" required="">
