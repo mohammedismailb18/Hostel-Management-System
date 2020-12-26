@@ -1,0 +1,53 @@
+body {
+    background-color: #ffff;
+    height:100%;
+}
+
+/**************** navigation bar *******************/
+
+.brand {
+    font-weight: 600;
+    margin-left: 10px;
+  }
+
+  .navbar-nav > li{
+    padding-left:60px;
+    padding-right:60px;
+    color: blue;
+  }
+
+  .logo-image {
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  .cards-format {
+    margin-top:30px; 
+    padding-bottom: -20px;
+     text-align: center;
+  }
+  .cards-format a {
+    margin-top : 20px;
+  }
+
+  .second-card {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .student-text{
+    margin-top : 10px;
+    margin-bottom: 10px;
+  }
+
+  .student-text-area {
+    width: 100%;
+    margin-top: 8px;
+
+  }
+
+  .contact-container {
+    margin-top: 150px;
+    margin-bottom: 220px;
+  }
+/*******************/
