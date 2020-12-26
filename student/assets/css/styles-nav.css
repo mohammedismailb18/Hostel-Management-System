@@ -50,4 +50,10 @@ body {
     margin-top: 150px;
     margin-bottom: 220px;
   }
+
+  .card-img-top {
+      width: 100%;
+      height: 15vw;
+      object-fit: cover;
+  }
 /*******************/
