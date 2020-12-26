@@ -2,6 +2,8 @@
 Author: W3layouts
 Author URL: http://w3layouts.com
 -->
+<?php require '../student_backend/config.inc.php'; ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -41,7 +43,7 @@ Author URL: http://w3layouts.com
                     <a class="nav-link" href="contact.php">Contact</a>
                 </li>
                 <li class="dropdown nav-item">
-                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">B180444CS<!-- <?php echo $_SESSION['roll']; ?> --->
+                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><?php echo $_SESSION['roll']; ?>
                     <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu agile_short_dropdown">

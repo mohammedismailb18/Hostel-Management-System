@@ -8,8 +8,8 @@
         <div class="row">
 
             <div class="col-md-6">
-                <input type="text" class="form-control student-text" placeholder="Hostel Name">   
-                <input type="text" class="form-control student-text" placeholder ="Roll No" value="B180444CS">
+                <input type="text" class="form-control student-text" placeholder="Hostel Name" value="A" readonly>   
+                <input type="text" class="form-control student-text" placeholder ="Roll No" value="B180444CS" readonly>
                 <input type="text" class="form-control student-text" placeholder="Name">
                 <input type="text" class="form-control student-text" placeholder="Subject">
             </div>
