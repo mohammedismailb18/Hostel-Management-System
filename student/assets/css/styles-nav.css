@@ -56,4 +56,32 @@ body {
       height: 15vw;
       object-fit: cover;
   }
+
+  footer {
+    position: absolute;
+    width: 100%;
+}
+
+.application-container {
+  margin-top: 100px;
+}
 /*******************/
+
+/**** For seat booking ******/
+.boxed label {
+  display: inline-block;
+  width:80px;
+  padding: 10px;
+  border: solid 2px #ccc;
+  transition: all 0.3s;
+  text-align: center;
+}
+
+.boxed input[type="radio"] {
+  display: none;
+}
+
+.boxed input[type="radio"]:checked + label {
+  border: solid 2px green;
+  background-color: rgb(81, 216, 126);
+}

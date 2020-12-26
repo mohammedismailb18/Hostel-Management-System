@@ -15,7 +15,7 @@
             </div>
 
             <div class="col-md-6">
-                <textarea class="form-control student-text-area" id="exampleFormControlTextarea1" rows="6" placeholder="Message..."></textarea>
+                <textarea class="form-control student-text-area" id="exampleFormControlTextarea1" rows="7" placeholder="Message..."></textarea>
                 
             </div>
             <div class="col-md-5" style="padding-left: 540px;">
