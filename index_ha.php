@@ -37,7 +37,7 @@
                     <div class="form-right-inf">
                         <h2>Hostel Admin Login</h2>
                         <div class="login-form-content">
-                            <form action="admin_backend/login-ha.inc.php" class="signin-form" method="post">
+                            <form action="admin/login-ha.inc.php" class="signin-form" method="post">
                                 <div class="one-frm">
                                     <input type="text" name="username" placeholder="Username" required="" autofocus>
                                 </div>

@@ -2,7 +2,7 @@
 Author: W3layouts
 Author URL: http://w3layouts.com
 -->
-<?php require '../student_backend/config.inc.php'; ?>
+<?php require 'config.inc.php'; ?>
 <!doctype html>
 <html lang="en">
   <head>

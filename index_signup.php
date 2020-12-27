@@ -54,6 +54,9 @@
                                     <input type="text" name="dept" placeholder=" Department" required="" autofocus>
                                 </div>
                                 <div class="one-frm">
+                                    <input type="text" name="mobile" placeholder=" Mobile" required="" autofocus>
+                                </div>
+                                <div class="one-frm">
                                     <input type="password" name="Password" placeholder="Password" required="">
                                 </div>
                                 <div class="one-frm">

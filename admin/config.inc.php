@@ -1,4 +1,4 @@
-<?php 
+<?php
   session_start();
   $servername = "localhost"; //change this  accordingly
   $dBUsername = "root";
@@ -8,6 +8,7 @@
   $conn=mysqli_connect($servername, $dBUsername, $dBPassword, $dBName);
 
   if (!$conn) {
+    //echo "connection issue me shifan"
     die("Connection Failed: ".mysqli_connect_error());
   }
 ?>
