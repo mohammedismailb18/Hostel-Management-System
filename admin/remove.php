@@ -4,7 +4,7 @@
 
     <h2 style="text-align: center;">Enter the details</h2>
     <br>
-    <form action="remove.inc.php" method="post">
+    <form action="remove.php" method="post">
         <div class="row">
 
             <div class="col-md-8" style="padding-left:400px ;">
@@ -21,4 +21,44 @@
 </div>
 <br>
 <br>
-<?php include('admin-footer.php');
+<?php include('admin-footer.php'); ?>
+
+<?php
+
+if (isset($_POST['remove-hm'])) {
+
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+  $hostel_name = $_POST['hostel_name'];
+//  echo $username;
+//  echo $password;
+//  echo $hostel_name;
+
+  if (empty($username) || empty($password) || empty($hostel_name) ) {
+    echo "<script type='text/javascript'>alert('Empty Feild!')</script>";
+    exit();
+  }
+  else if($_SESSION['password']!=$password){
+    echo "<script type='text/javascript'>alert('Wrong Password!')</script>";
+    exit();
+  }
+  else {
+    $sql = "SELECT * FROM hostel WHERE hostel_name='$hostel_name'";
+    $result = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_assoc($result);
+    $hostel_id= $row['hostel_id'];
+    $sql = "DELETE FROM hostel_manager WHERE username='$username' and hostel_id='$hostel_id'";
+    $result = mysqli_query($conn, $sql);
+    
+    if($result) {
+        echo "<script type='text/javascript'>alert('Sucessfully Deleted!')</script>";
+        exit();
+    }
+    else {
+        echo "<script type='text/javascript'>alert('Deletion Failed!')</script>";
+        exit();
+    }
+  }
+}
+
+?>
