@@ -65,25 +65,6 @@
     <?php }?>
 
 
-<!--
-<br><br>   
-    <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Student Name</th>
-        <th>Student ID</th>
-        <th>Contact Number</th> 
-        <th>Hostel</th>
-        <th>Room Number</th>
-      </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td colspan="5">info</td>
-        </tr>
-    </tbody>
-    </table>
--->
 </div>
 <br>
 <br>
