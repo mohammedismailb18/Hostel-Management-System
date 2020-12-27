@@ -69,7 +69,7 @@ if(isset($_POST['submit'])){
         echo "<script type='text/javascript'>alert('column empty!')</script>";
         exit();
     }
-    else if($hostel_name ="not alloted") {
+    else if($hostel_name =="not alloted") {
         echo "<script type='text/javascript'>alert('Hostel not alloted!')</script>";
         exit();
     }
