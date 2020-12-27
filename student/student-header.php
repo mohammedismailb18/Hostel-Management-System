@@ -51,7 +51,7 @@ Author URL: http://w3layouts.com
                       <a href="student-profile.php">My Profile</a>
                     </li>
                     <li>
-                      <a href="includes/logout.inc.php">Logout</a>
+                      <a href="../student_backend/logout.inc.php">Logout</a>
                     </li>
                   </ul>
                 </li>
