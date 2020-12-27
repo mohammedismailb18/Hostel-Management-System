@@ -2,6 +2,9 @@
 Author: W3layouts
 Author URL: http://w3layouts.com
 -->
+<?php
+ require '../backend/db-connect.php';
+?>
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,7 +12,7 @@ Author URL: http://w3layouts.com
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hotels a Hotels Category Responsive Web Template | Home : W3layouts</title>
+    <title>Hostel-Management-System</title>
 
     <link href="assets/css/student-font.css" rel="stylesheet">
 
@@ -55,7 +58,7 @@ Author URL: http://w3layouts.com
                   </ul>
                 </li>
                 <li class="dropdown nav-item">
-                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">B180444CS<!-- <?php echo $_SESSION['roll']; ?> --->
+                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><?php echo $_SESSION['username']; ?> 
                     <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu agile_short_dropdown">
@@ -63,7 +66,7 @@ Author URL: http://w3layouts.com
                       <a href="profile.php">My Profile</a>
                     </li>
                     <li>
-                      <a href="includes/logout.inc.php">Logout</a>
+                      <a href="../backend/logout-hm.php">Logout</a>
                     </li>
                   </ul>
                 </li>
