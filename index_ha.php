@@ -37,14 +37,14 @@
                     <div class="form-right-inf">
                         <h2>Hostel Admin Login</h2>
                         <div class="login-form-content">
-                            <form action="#" class="signin-form" method="post">
+                            <form action="admin_backend/login-ha.inc.php" class="signin-form" method="post">
                                 <div class="one-frm">
-                                    <input type="text" name="Ha_id" placeholder="Hostel Admin id" required="" autofocus>
+                                    <input type="text" name="ha_id" placeholder="Hostel Admin id" required="" autofocus>
                                 </div>
                                 <div class="one-frm">
-                                    <input type="password" name="Password" placeholder="Password" required="">
+                                    <input type="password" name="password" placeholder="Password" required="">
                                 </div>
-                                <button class="btn btn-style mt-3">Login </button>
+                                <button class="btn btn-style mt-3" name="admin-login">Login </button>
                             </form>
                         </div>
                     </div>
