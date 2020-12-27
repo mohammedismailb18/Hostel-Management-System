@@ -11,7 +11,7 @@ Author URL: http://w3layouts.com
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Hotels a Hotels Category Responsive Web Template | Home : W3layouts</title>
+    <title>HMS Student</title>
 
     <link href="assets/css/student-font.css" rel="stylesheet">
 
@@ -31,7 +31,7 @@ Author URL: http://w3layouts.com
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
               <!-- <img src="/images/logo.svg" class="img-logo">
               <a class="navbar-brand brand" href="#">OLYMPICS DATABASE</a> -->
-              <a href="index.php" class="navbar-brand brand"><img src="assets/images/nitc-logo.jpg" class = "logo-image" style="height: 50px;">HOSTEL MANAGEMENT</a> 
+              <a href="home.php" class="navbar-brand brand"><img src="assets/images/nitc-logo.jpg" class = "logo-image" style="height: 50px;">HOSTEL MANAGEMENT</a> 
               <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                 <li class="nav-item">
                   <a class="nav-link" href="home.php">Home</a>

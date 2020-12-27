@@ -68,6 +68,10 @@ body {
 /*******************/
 
 /**** For seat booking ******/
+
+.boxed {
+  margin-left: 20px;
+}
 .boxed label {
   display: inline-block;
   width:80px;
@@ -84,4 +88,8 @@ body {
 .boxed input[type="radio"]:checked + label {
   border: solid 2px green;
   background-color: rgb(81, 216, 126);
+}
+
+.boxed :hover {
+  border: solid 2px green;
 }
