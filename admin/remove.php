@@ -9,7 +9,15 @@
 
             <div class="col-md-8" style="padding-left:400px ;">
             <input type="text" name='username' class="form-control student-text" placeholder="User Name">
-            <input type="text" name='hostel_name' class="form-control student-text" placeholder ="Hostel Name">
+            <select class="custom-select" name="hostel_name">
+                    <option selected>Hostel Name</option>
+                    <option value="A">A Hostel</option>
+                    <option value="B">B Hostel</option>
+                    <option value="C">C Hostel</option>
+                    <option value="D">D Hostel</option>
+                    <option value="E">E Hostel</option>
+                    <option value="F">F Hostel</option>
+            </select>
              <input type="password" name='password' class="form-control student-text" placeholder="Admin Password">
             </div>
             <div class="col-md-10" style="padding-left: 540px;">

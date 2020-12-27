@@ -12,7 +12,15 @@
                 <input type="text" name="f_name" class="form-control student-text" placeholder="First Name">
                 <input type="text" name="l_name" class="form-control student-text" placeholder="Last Name">
                 <input type="password" name="password" class="form-control student-text" placeholder="Password">
-                <input type="text" name="hostel_name" class="form-control student-text" placeholder="Hostel Name">
+                <select class="custom-select" name="hostel_name">
+                    <option selected>Hostel Name</option>
+                    <option value="A">A Hostel</option>
+                    <option value="B">B Hostel</option>
+                    <option value="C">C Hostel</option>
+                    <option value="D">D Hostel</option>
+                    <option value="E">E Hostel</option>
+                    <option value="F">F Hostel</option>
+                </select>
                 <input type="text" name="mobile" class="form-control student-text" placeholder="Mobile">
             </div>
             <div class="col-md-10" style="padding-left: 540px;">
@@ -48,7 +56,7 @@ if (isset($_POST['appoint-hm'])) {
     $hostel_id= $row['hostel_id'];
     //echo $hostel_id;
     //echo $row;
-    $sql = "INSERT INTO hostel_manager (hm_id, f_name, l_name, username, mobile, password, admin, hostel_id) VALUES (NULL, '$f_name', '$l_name', '$username', '$mobile', '$password', $ha_id, '$hostel_id');";
+    $sql = "INSERT INTO hostel_manager (f_name, l_name, username, mobile, password, admin, hostel_id) VALUES ('$f_name', '$l_name', '$username', '$mobile', '$password', '$ha_id', '$hostel_id');";
     $result = mysqli_query($conn, $sql);
   //  echo "<script type='text/javascript'>alert('Sucessfully Inserted!')</script>";
     if($result) {
