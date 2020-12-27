@@ -39,7 +39,7 @@
                         <div class="login-form-content">
                             <form action="admin_backend/login-ha.inc.php" class="signin-form" method="post">
                                 <div class="one-frm">
-                                    <input type="text" name="ha_id" placeholder="Hostel Admin id" required="" autofocus>
+                                    <input type="text" name="username" placeholder="Username" required="" autofocus>
                                 </div>
                                 <div class="one-frm">
                                     <input type="password" name="password" placeholder="Password" required="">

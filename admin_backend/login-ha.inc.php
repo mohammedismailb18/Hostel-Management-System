@@ -2,15 +2,15 @@
 
 if (isset($_POST['admin-login'])) {
   require 'config.inc.php';
-  $ha_id = $_POST['ha_id'];
+  $username = $_POST['username'];
   $password = $_POST['password'];
 
-  if (empty($ha_id) || empty($password)) {
+  if (empty($username) || empty($password)) {
     header("Location: ../index.php?error=emptyfields");
     exit();
   }
   else {
-    $sql = "SELECT * FROM administrator WHERE ha_id = '$ha_id'";
+    $sql = "SELECT * FROM administrator WHERE username = '$username'";
     $result = mysqli_query($conn, $sql);
     if($row = mysqli_fetch_assoc($result)){
       // $pwdCheck = password_verify($password, $row['password']);
@@ -54,7 +54,7 @@ if (isset($_POST['admin-login'])) {
 }
 
 else {
-  header("Location: ../index.php");
+  header("Location: ../index_ha.php");
   exit();
 }
 
