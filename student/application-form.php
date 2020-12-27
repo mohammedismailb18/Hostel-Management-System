@@ -35,15 +35,25 @@
                     $hostel_name = $_GET['id'];
                     $query = "SELECT * FROM room NATURAL JOIN hostel WHERE hostel_name='$hostel_name' ORDER BY room_no ASC";
                     $result = mysqli_query($conn,$query);
+                    
+                    // Checking wheather someone applied
+                    $query2 = "SELECT room_id FROM application WHERE status='0' OR status ='1'";
+                    $result2 = mysqli_query($conn,$query2);
+                    $room_set = array();
+                    while($row2 = mysqli_fetch_array($result2))
+                    {
+                        array_push($room_set,$row2['room_id']);
+                    }
+
                     while($row = mysqli_fetch_assoc($result)) {
-                        if($row['allocated'] == 1) {
+                        if($row['allocated'] == 1 || in_array($row['room_id'], $room_set)) {
                             continue;
                         }
                         $x = $row['room_no'];
                 ?>
                     <input type="radio" id= <?php echo $x ?> name= "room_no" value=<?php echo $x ?>>
                     <label for=<?php echo $x ?> > <?php echo $x ?> </label>
-                <?php $y=$x; } ?> 
+                <?php } ?> 
 
                 <br><br>
             </div>
