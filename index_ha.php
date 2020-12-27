@@ -45,6 +45,8 @@
                                     <input type="password" name="password" placeholder="Password" required="">
                                 </div>
                                 <button class="btn btn-style mt-3" name="admin-login">Login </button>
+                                <p class="already">Login as <a href="index_hm.php">Hostel Manager</a></p>
+                                <p class="already" style="margin-top:-2px;">Login as <a href="index.php">Student</a></p>
                             </form>
                         </div>
                     </div>

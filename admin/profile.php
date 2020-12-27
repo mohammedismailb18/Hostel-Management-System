@@ -9,7 +9,7 @@
                         <div class="col-sm-4 bg-c-lite-green user-profile">
                             <div class="card-block text-center text-white">
                                 <div class="m-b-25"> <img src="https://img.icons8.com/bubbles/100/000000/user.png" class="img-radius" alt="User-Profile-Image"> </div>
-                                <h6 class="f-w-600" style="color: white;">Hembo Tingor</h6>
+                                <h6 class="f-w-600" style="color: white;"><?php echo $_SESSION['f_name'] . ' ' . $_SESSION['l_name']; ?></h6>
                                 <p>Hostel Manager</p> <i class=" mdi mdi-square-edit-outline feather icon-edit m-t-10 f-16"></i>
                             </div>
                         </div>
@@ -17,24 +17,16 @@
                             <div class="card-block">
                                 <h6 class="m-b-20 p-b-5 b-b-default f-w-600">Information</h6>
                                 <div class="row">
-                                    <div class="col-sm-6">
+                                    <div class="col-md-6">
                                         <p class="m-b-10 f-w-600" style="color: black;">Username</p>
-                                        <h6 class="text-muted f-w-400">xxx</h6>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <p class="m-b-10 f-w-600" style="color: black;">Email</p>
-                                        <h6 class="text-muted f-w-400">xxxx@gmail.com</h6>
+                                        <h6 class="text-muted f-w-400"><?php echo $_SESSION['username']; ?></h6>
                                     </div>
                                 </div>
-                               <br>
+                                <br><br>
                                 <div class="row">
-                                    <div class="col-sm-6">
-                                        <p class="m-b-10 f-w-600" style="color: black;">Phone</p>
-                                        <h6 class="text-muted f-w-400" style="color: black;">9999999999</h6>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <p class="m-b-10 f-w-600" style="color: black;">Hostel</p>
-                                        <h6 class="text-muted f-w-400">A</h6>
+                                <div class="col-md-6">
+                                        <p class="m-b-10 f-w-600" style="color: black;">Mobile No</p>
+                                        <h6 class="text-muted f-w-400"><?php echo $_SESSION['mobile']; ?></h6>
                                     </div>
                                 </div>
                                 <ul class="social-link list-unstyled m-t-40 m-b-10">
