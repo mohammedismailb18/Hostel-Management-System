@@ -139,7 +139,7 @@ $hostel_name1 = $row12['hostel_name'];
               <td>{$row1['message']}</td>
               <td>
               <form action='room-allocation.php' method='get'>
-               <button type='submit' onclick=ref(); style='margin-top: 0px;' name='alloc' value='{$row1['student_id']}' class='btn-md btn-primary' style='margin-top:10px; margin-left: -10px; padding: 8px 25px 8px;''>Allocate</button>
+               <button type='submit' style='margin-top: 0px;' name='alloc' value='{$row1['student_id']}' class='btn-md btn-primary' style='margin-top:10px; margin-left: -10px; padding: 8px 25px 8px;''>Allocate</button>
                </form>
                </td></tr>\n";
       	}
