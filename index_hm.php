@@ -37,16 +37,14 @@
                     <div class="form-right-inf">
                         <h2>Hostel Manager Login</h2>
                         <div class="login-form-content">
-                            <form action="#" class="signin-form" method="post">
+                            <form action="hm-backend/login-hm.php" class="signin-form" method="post">
                                 <div class="one-frm">
-                                    <input type="text" name="Hm_id" placeholder="Hostel Manager id" required="" autofocus>
+                                    <input type="text" name="username" placeholder="Hostel Manager id" required="" autofocus>
                                 </div>
                                 <div class="one-frm">
-                                    <input type="password" name="Password" placeholder="Password" required="">
+                                    <input type="password" name="pwd" placeholder="Password" required="">
                                 </div>
-                                <button class="btn btn-style mt-3">Login </button>
-                                <p class="already">Login as <a href="index_ha.php">Admin</a></p>
-                                <p class="already" style="margin-top:-2px;">Login as <a href="index.php">Student</a></p>
+                                <button class="btn btn-style mt-3" name="login-submit">Login </button>
                             </form>
                         </div>
                     </div>
