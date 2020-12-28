@@ -47,7 +47,7 @@ if (isset($_POST['signup-student'])) {//
     $result = mysqli_query($conn, $sql);
     if($result) {
       echo ("<script LANGUAGE='JavaScript'>
-      window.alert('Succesfully Updated');
+      window.alert('Your account created Successfully');
       window.location.href='../index.php';
       </script>");
     }
