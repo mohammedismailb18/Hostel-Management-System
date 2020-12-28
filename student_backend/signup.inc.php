@@ -15,38 +15,48 @@ if (isset($_POST['signup-student'])) {//
   $year = $_POST['year'];
   $dept = $_POST['dept'];
 
-  /*echo $year;
-  echo $dept;
-  echo $gender;
-  exit();*/
-  //
-
-
   if (empty($student_id) || empty($password) || empty($f_name) || empty($l_name) || empty($confpassword) || empty($mobile) || empty($gender) || empty($year) || empty($dept)) {
-    header("Location: ../index_signup.php?error=emptyfields");
-    exit();
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Empty Feilds!!');
+        window.location.href='../index_signup.php';
+        </script>");
   }
   else {
     if($confpassword!=$password)
     {
     //  echo "<script type='text/javascript'>alert('Please Enter same password!')</script>";
-      header("Location: ../index_signup.php?error=password_mismatch");
-      exit();
+    echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Passwords not matching');
+      window.location.href='../index_signup.php';
+      </script>");
     }
-    $_SESSION['roll']=$student_id;
-    $_SESSION['fname']=$f_name;
-    $_SESSION['lname']=$l_name;
-    $_SESSION['year_of_study']=$year;
-    $_SESSION['department']=$dept;
-    $_SESSION['password']=$password;
-    $_SESSION['gender']=$gender;
-    $_SESSION['hostel_id']=NULL;
-    $_SESSION['room_id']=NULL;
+
+    $sql = "SELECT* FROM student WHERE student_id = '$student_id';";
+    $result = mysqli_query($conn, $sql);
+    if($result) {
+      $row = mysqli_fetch_assoc($result);
+        if(!empty($row)) {
+        echo ("<script LANGUAGE='JavaScript'>
+        window.alert('User Already exist');
+        window.location.href='../index_signup.php';
+        </script>");
+      } 
+    }
 
     $sql = "INSERT INTO student VALUES ('$student_id','$f_name', '$l_name', '$year','$dept', '$password', NULL ,NULL,$gender,'$mobile');";
-    $result = mysqli_query($conn, $sql);//
-    header("Location: ../student/home.php");
-    exit();
+    $result = mysqli_query($conn, $sql);
+    if($result) {
+      echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Succesfully Updated');
+      window.location.href='../index.php';
+      </script>");
+    }
+    else {
+      echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Sign up error Please try agin Later');
+      window.location.href='../index_signup.php';
+      </script>");
+    }
   }
 }
 
