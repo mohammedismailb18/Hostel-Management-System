@@ -45,6 +45,8 @@
                                     <input type="password" name="pwd" placeholder="Password" required="">
                                 </div>
                                 <button class="btn btn-style mt-3" name="login-submit">Login </button>
+                                <p class="already">Login as <a href="index_ha.php">Hostel Admin</a></p>
+                                <p class="already" style="margin-top:-2px;">Login as <a href="index.php">Student</a></p>
                             </form>
                         </div>
                     </div>

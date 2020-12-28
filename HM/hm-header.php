@@ -66,7 +66,7 @@ Author URL: http://w3layouts.com
                       <a href="profile.php">My Profile</a>
                     </li>
                     <li>
-                      <a href="../backend/logout-hm.php">Logout</a>
+                      <a href="../hm-backend/logout-hm.php">Logout</a>
                     </li>
                   </ul>
                 </li>

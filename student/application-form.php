@@ -9,20 +9,12 @@
 
             <div class="col-md-6">
                 <input type="text" class="form-control student-text" placeholder="Roll No" value = <?php echo $_SESSION['roll']; ?> readonly>   
-                <input type="text" class="form-control student-text" placeholder ="Hostel Name" value = <?php echo $_GET['id'] ?> readonly>
-                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Floor :</label>
-                <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                    <option selected>Choose...</option>
-                    <option value="1">1st floor</option>
-                    <option value="2">2nd floor</option>
-                    <option value="3">3rd floor</option>
-                    <option value="4">4th floor</option>
-                </select>
+                <input type="text" class="form-control student-text" placeholder ="Hostel Name" value = <?php echo $_GET['id'] . " Hostel"; ?> readonly>
 
             </div>
 
             <div class="col-md-6">
-                <textarea class="form-control student-text-area" id="exampleFormControlTextarea1" rows="7" placeholder="Message..." name="message"></textarea>
+                <textarea class="form-control student-text-area" id="exampleFormControlTextarea1" rows="3" placeholder="Message..." name="message"></textarea>
                 
             </div>
         </div>
@@ -59,7 +51,7 @@
             </div>
         <!-------------------------------->
                 <div class="col-md-5" style="padding-left: 540px; margin-bottom: 20px;">
-                <button type="submit" name="application"  class="btn-lg btn-primary" style="margin-top:10px;">Submit</button>
+                <button type="submit" name="application"  class="btn-lg btn-primary" style="margin-top:10px;margin-bottom: 30px;">Submit</button>
                 </div>
         </div>
     </form>
