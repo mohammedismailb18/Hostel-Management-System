@@ -1,0 +1,207 @@
+body {
+    /* background-image: linear-gradient(to right,#004e00 , #008900); */
+    background: linear-gradient( rgba(0, 4, 4, 0.6), rgba(0, 4, 4, 0.6) ), url('../images/nitc.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position:center top;
+    text-align: center;
+}
+
+/*****************************************************/
+
+h1 {
+    color: white;
+    font-family: Poppins,sans-serif;
+    padding-top: 80px;
+    font-size: 40px;
+    font-weight: 900;
+}
+
+h2 {
+  color: white;
+  font-family: Poppins,sans-serif;
+  font-weight: 700;
+}
+
+h3 {
+  color: white;
+  font-family: Poppins,sans-serif;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-top: 50px;
+}
+
+.content {
+    padding-top: 150px;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    margin-top: 100px;
+    background: #FFFFFF;
+    max-width: 450px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    /*background: #f2f2f2;*/
+    width: 100%;
+    margin: 0 0 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    border: 1px solid rgb(122, 141, 122);
+  }
+  .form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #0275d8;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+  }
+
+  .form button:hover,.form button:active,.form button:focus {
+    background: #5247f0;
+  }
+  .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 15px;
+  }
+
+  .form .message-sign-up {
+    color: #000000;
+    margin-top: -20px; 
+    font-size: 30px;
+    font-weight: 450;
+  }
+  .form .message a {
+    color: #0275d8;
+    text-decoration: none;
+    font-size: 15px;
+  }
+
+.sign-up {
+    padding-top: 80px;
+}
+
+/***************** login page **********************/
+
+.login-form {
+  margin-top: 70px;
+}
+
+
+
+/*************** user page ************************/
+.img-user {
+  width: 20px;
+  height:20px;
+  margin-right: 10px;
+  margin-bottom: 5px;;
+}
+
+.form-user-page {
+  max-width: 450px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.form-user-page .form-row .form-group .radio-button {
+  margin-top: 6px;
+}
+
+.form-user-page p {
+  text-align: center;
+  line-height: 2rem;
+  font-weight: 800;
+}
+
+/* dropdown for logout */
+
+.dropbtn {
+  background-color: #ffff;
+  color: #369e39;
+  padding: 5px 20px 5px;
+  font-size: 16px;
+  border: solid;
+  border-radius: 5%;
+  border-color: #369e39;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  width: 100%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 5px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: rgb(255, 255, 255);}
+
+.dropdown:hover .dropdown-content {display: block;}
+
+.dropdown:hover .dropbtn {
+  background-color: #369e39;
+  color: white;
+}
+
+/**************** my posts ***************/
+
+.form-my-post {
+  position: relative;
+  z-index: 1;
+  margin-top: 100px;
+  background: #FFFFFF;
+  max-width: 450px;
+  margin: 20px auto 10px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+.post-title {
+  color: #4CAF50;
+  margin-top: -20px; 
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.post-content {
+  text-align: left;
+}
+
+.description {
+  display: inline;
+}
+
+.student-text {
+  border: 1px solid rgb(122, 141, 122);
+  margin-bottom: 15px;
+}
