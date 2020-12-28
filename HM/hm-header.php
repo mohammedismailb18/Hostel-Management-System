@@ -3,7 +3,7 @@ Author: W3layouts
 Author URL: http://w3layouts.com
 -->
 <?php
- require '../backend/db-connect.php';
+ require '../hm-backend/db-connect.php';
 ?>
 <!doctype html>
 <html lang="en">
