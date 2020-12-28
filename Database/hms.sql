@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 26, 2020 at 10:09 AM
+-- Generation Time: Dec 28, 2020 at 12:59 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.10
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `hostel_management`
+-- Database: `hms`
 --
 
 -- --------------------------------------------------------
@@ -36,6 +36,13 @@ CREATE TABLE `administrator` (
   `password` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `administrator`
+--
+
+INSERT INTO `administrator` (`ha_id`, `f_name`, `l_name`, `username`, `mobile`, `password`) VALUES
+(1, 'mohammed', 'ismail', 'ismu', '1234567890', '456');
+
 -- --------------------------------------------------------
 
 --
@@ -47,7 +54,8 @@ CREATE TABLE `application` (
   `student_id` varchar(20) DEFAULT NULL,
   `room_id` int(20) DEFAULT NULL,
   `hm_id` int(20) DEFAULT NULL,
-  `message` varchar(1000) DEFAULT NULL
+  `message` varchar(1000) DEFAULT NULL,
+  `status` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -63,6 +71,15 @@ CREATE TABLE `hostel` (
   `no_of_students` int(5) DEFAULT NULL,
   `accepted_gen` int(2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hostel`
+--
+
+INSERT INTO `hostel` (`hostel_id`, `hostel_name`, `no_of_rooms`, `no_of_students`, `accepted_gen`) VALUES
+(1, 'A', 1000, 900, 1),
+(3, 'C', 1000, 900, 1),
+(5, 'MBH', 1000, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -80,6 +97,14 @@ CREATE TABLE `hostel_manager` (
   `admin` int(10) DEFAULT NULL,
   `hostel_id` int(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `hostel_manager`
+--
+
+INSERT INTO `hostel_manager` (`hm_id`, `f_name`, `l_name`, `username`, `mobile`, `password`, `admin`, `hostel_id`) VALUES
+(3, 'abid', 'ali', 'abi', '0987', 'qwe', 1, 5),
+(35, 'fadi', 'noushad', 'fadi', '9876543210', '789', 1, 5);
 
 -- --------------------------------------------------------
 
@@ -100,17 +125,6 @@ CREATE TABLE `messages` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mobile_number`
---
-
-CREATE TABLE `mobile_number` (
-  `student_id` varchar(20) NOT NULL,
-  `mobile` varchar(20) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `room`
 --
 
@@ -120,6 +134,37 @@ CREATE TABLE `room` (
   `hostel_id` int(10) DEFAULT NULL,
   `allocated` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `room`
+--
+
+INSERT INTO `room` (`room_id`, `room_no`, `hostel_id`, `allocated`) VALUES
+(26, 114, 3, 0),
+(27, 115, 3, 0),
+(28, 116, 3, 0),
+(29, 117, 3, 0),
+(30, 118, 3, 0),
+(31, 119, 3, 0),
+(32, 120, 3, 0),
+(33, 121, 3, 0),
+(34, 122, 3, 0),
+(35, 123, 3, 0),
+(36, 124, 3, 0),
+(37, 125, 3, 0),
+(38, 126, 3, 0),
+(39, 127, 3, 0),
+(40, 128, 3, 0),
+(41, 129, 3, 0),
+(42, 130, 3, 0),
+(43, 131, 3, 0),
+(44, 132, 3, 0),
+(45, 133, 3, 0),
+(46, 134, 3, 0),
+(47, 135, 3, 0),
+(48, 136, 3, 0),
+(49, 137, 3, 0),
+(50, 138, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -136,8 +181,17 @@ CREATE TABLE `student` (
   `password` varchar(20) NOT NULL,
   `hostel_id` int(20) DEFAULT NULL,
   `room_id` int(10) DEFAULT NULL,
-  `gender` int(2) DEFAULT NULL
+  `gender` int(2) DEFAULT NULL,
+  `mobile` varchar(20) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student`
+--
+
+INSERT INTO `student` (`student_id`, `f_name`, `l_name`, `year`, `dept`, `password`, `hostel_id`, `room_id`, `gender`, `mobile`) VALUES
+('123', 'ind', 'jith', '3', 'CSE', '789', NULL, NULL, 1, '987'),
+('b180501cs', 'muhammed', 'shifan p', '3', 'cse', '123', NULL, NULL, 1, NULL);
 
 --
 -- Indexes for dumped tables
@@ -186,13 +240,6 @@ ALTER TABLE `messages`
   ADD KEY `fk_messages_student_id` (`student_id`);
 
 --
--- Indexes for table `mobile_number`
---
-ALTER TABLE `mobile_number`
-  ADD PRIMARY KEY (`student_id`,`mobile`),
-  ADD UNIQUE KEY `mobile` (`mobile`);
-
---
 -- Indexes for table `room`
 --
 ALTER TABLE `room`
@@ -215,25 +262,25 @@ ALTER TABLE `student`
 -- AUTO_INCREMENT for table `administrator`
 --
 ALTER TABLE `administrator`
-  MODIFY `ha_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `ha_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `application`
 --
 ALTER TABLE `application`
-  MODIFY `application_no` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `application_no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `hostel`
 --
 ALTER TABLE `hostel`
-  MODIFY `hostel_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `hostel_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `hostel_manager`
 --
 ALTER TABLE `hostel_manager`
-  MODIFY `hm_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `hm_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `messages`
@@ -245,7 +292,7 @@ ALTER TABLE `messages`
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `room_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `room_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- Constraints for dumped tables
@@ -272,12 +319,6 @@ ALTER TABLE `hostel_manager`
 ALTER TABLE `messages`
   ADD CONSTRAINT `fk_messages_hm_id` FOREIGN KEY (`hm_id`) REFERENCES `hostel_manager` (`hm_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_messages_student_id` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `mobile_number`
---
-ALTER TABLE `mobile_number`
-  ADD CONSTRAINT `fk_mobile_number_student_id` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `room`
