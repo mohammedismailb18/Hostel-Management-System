@@ -17,6 +17,7 @@
             </div>
         </div>
     </form>
+    <br><br>
 
     <?php 
     if(isset($_POST['contact-button']))
@@ -56,7 +57,7 @@
             $result8 = mysqli_query($conn,$query8);
             $row8 = mysqli_fetch_assoc($result8);
             
-            if($row7['hostel_name'] == NULL) {
+            if(is_null($row7['hostel_name'])) {
                 $hostel_name = "not alloted";
                 $room_no = "not alloted";
             }
