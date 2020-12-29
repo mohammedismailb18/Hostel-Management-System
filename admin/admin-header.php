@@ -42,7 +42,7 @@ Author URL: http://w3layouts.com
                     <a class="nav-link" href="students.php">Students</a>
                 </li>
                 <li class="dropdown nav-item">
-                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">Account<!-- <?php echo $_SESSION['roll']; ?> --->
+                  <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"><?php echo $_SESSION['f_name'] . " " . $_SESSION['l_name'] ?>
                     <b class="caret"></b>
                   </a>
                   <ul class="dropdown-menu agile_short_dropdown">
