@@ -13,7 +13,7 @@
             </div>
 
             <div class="col-md-6">
-                <button type="submit" name="contact-button"  class="btn-lg btn-primary" style="margin-top:10px;">Submit</button>
+                <button type="submit" name="contact-button"  class="btn-lg btn-primary" style="margin-top: 5px;">Submit</button>
             </div>
         </div>
     </form>

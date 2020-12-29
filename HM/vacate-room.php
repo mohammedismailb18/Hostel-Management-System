@@ -16,7 +16,7 @@
         <div class="row">
 
             <div class="col-md-8" style="padding-left:400px ;">
-                <input type="text" class="form-control student-text" placeholder="Hostel Name" name="hostel" value="<?php echo $row1['hostel_name']?>">   
+                <input type="text" class="form-control student-text" placeholder="Hostel Name" name="hostel" value="<?php echo $row1['hostel_name']?>" readonly>   
                 <input type="text" class="form-control student-text" name="roll_no" placeholder ="Roll No" >
                 <input type="number" class="form-control student-text" name="room_no" placeholder ="Room No" >
               

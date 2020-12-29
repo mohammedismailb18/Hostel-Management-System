@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 28, 2020 at 12:59 PM
+-- Generation Time: Dec 29, 2020 at 04:27 PM
 -- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- PHP Version: 7.2.33
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,7 +41,7 @@ CREATE TABLE `administrator` (
 --
 
 INSERT INTO `administrator` (`ha_id`, `f_name`, `l_name`, `username`, `mobile`, `password`) VALUES
-(1, 'mohammed', 'ismail', 'ismu', '1234567890', '456');
+(1, 'Suresh', 'Kumar', 'suresh', '8909786756', 'suresh');
 
 -- --------------------------------------------------------
 
@@ -57,6 +57,17 @@ CREATE TABLE `application` (
   `message` varchar(1000) DEFAULT NULL,
   `status` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `application`
+--
+
+INSERT INTO `application` (`application_no`, `student_id`, `room_id`, `hm_id`, `message`, `status`) VALUES
+(18, 'B180501CS', 334, 3, 'I need 1st floor', 0),
+(19, 'B180492CS', 353, 3, '', 0),
+(20, 'B180476CS', 354, 3, 'Please give me room in 2nd floor.', 0),
+(21, 'B180486CS', 356, 3, '', 1),
+(23, 'B180437CS', 329, 3, '', 1);
 
 -- --------------------------------------------------------
 
@@ -77,9 +88,12 @@ CREATE TABLE `hostel` (
 --
 
 INSERT INTO `hostel` (`hostel_id`, `hostel_name`, `no_of_rooms`, `no_of_students`, `accepted_gen`) VALUES
-(1, 'A', 1000, 900, 1),
-(3, 'C', 1000, 900, 1),
-(5, 'MBH', 1000, 1, 1);
+(1, 'A', 100, 100, 1),
+(2, 'B', 200, 200, 1),
+(3, 'C', 200, 200, 1),
+(4, 'D', 300, 300, 1),
+(5, 'E', 200, 200, 1),
+(6, 'F', 200, 200, 1);
 
 -- --------------------------------------------------------
 
@@ -103,8 +117,9 @@ CREATE TABLE `hostel_manager` (
 --
 
 INSERT INTO `hostel_manager` (`hm_id`, `f_name`, `l_name`, `username`, `mobile`, `password`, `admin`, `hostel_id`) VALUES
-(3, 'abid', 'ali', 'abi', '0987', 'qwe', 1, 5),
-(35, 'fadi', 'noushad', 'fadi', '9876543210', '789', 1, 5);
+(3, 'Athif', 'Aslam', 'athif', '9878987898', 'athif', 1, 3),
+(7, 'Hareesh', 'Kanaran', 'hareesh', '08547703798', 'hareesh', 1, 5),
+(14, 'abid', 'ali', 'abid', '8796578978', 'abid', 1, 4);
 
 -- --------------------------------------------------------
 
@@ -120,6 +135,25 @@ CREATE TABLE `messages` (
   `message` varchar(1000) DEFAULT NULL,
   `time_stamp` datetime DEFAULT NULL,
   `sender` tinyint(1) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `messages`
+--
+
+INSERT INTO `messages` (`msg_id`, `hm_id`, `student_id`, `subject`, `message`, `time_stamp`, `sender`) VALUES
+(25, 3, 'B180437CS', 'Bulb fused', 'Sir, Today morning bulb in my room got fused. Kindly Please fix it.', '2020-12-28 19:53:52', 1),
+(26, 3, 'B180486CS', 'Fan not working', 'Sir, From last sunday itself fan in my room is not working properly. Please fix it.', '2020-12-28 19:58:04', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `mobile_number`
+--
+
+CREATE TABLE `mobile_number` (
+  `student_id` varchar(20) NOT NULL,
+  `mobile` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -140,31 +174,164 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`room_id`, `room_no`, `hostel_id`, `allocated`) VALUES
-(26, 114, 3, 0),
-(27, 115, 3, 0),
-(28, 116, 3, 0),
-(29, 117, 3, 0),
-(30, 118, 3, 0),
-(31, 119, 3, 0),
-(32, 120, 3, 0),
-(33, 121, 3, 0),
-(34, 122, 3, 0),
-(35, 123, 3, 0),
-(36, 124, 3, 0),
-(37, 125, 3, 0),
-(38, 126, 3, 0),
-(39, 127, 3, 0),
-(40, 128, 3, 0),
-(41, 129, 3, 0),
-(42, 130, 3, 0),
-(43, 131, 3, 0),
-(44, 132, 3, 0),
-(45, 133, 3, 0),
-(46, 134, 3, 0),
-(47, 135, 3, 0),
-(48, 136, 3, 0),
-(49, 137, 3, 0),
-(50, 138, 3, 0);
+(1, 100, 2, 0),
+(2, 101, 2, 0),
+(3, 110, 1, 0),
+(4, 111, 1, 0),
+(203, 112, 1, 0),
+(204, 113, 1, 0),
+(205, 114, 1, 0),
+(206, 115, 1, 0),
+(207, 116, 1, 0),
+(208, 117, 1, 0),
+(209, 118, 1, 0),
+(210, 119, 1, 0),
+(211, 120, 1, 0),
+(212, 121, 1, 0),
+(213, 122, 1, 0),
+(214, 123, 1, 0),
+(215, 124, 1, 0),
+(216, 125, 1, 0),
+(217, 126, 1, 0),
+(218, 127, 1, 0),
+(219, 128, 1, 0),
+(220, 129, 1, 0),
+(221, 130, 1, 0),
+(222, 131, 1, 0),
+(223, 132, 1, 0),
+(224, 133, 1, 0),
+(230, 110, 2, 0),
+(231, 111, 2, 0),
+(232, 112, 2, 0),
+(233, 113, 2, 0),
+(234, 114, 2, 0),
+(235, 115, 2, 0),
+(236, 116, 2, 0),
+(237, 117, 2, 0),
+(238, 118, 2, 0),
+(239, 119, 2, 0),
+(240, 120, 2, 0),
+(241, 121, 2, 0),
+(242, 122, 2, 0),
+(243, 123, 2, 0),
+(244, 124, 2, 0),
+(245, 125, 2, 0),
+(246, 126, 2, 0),
+(247, 127, 2, 0),
+(248, 128, 2, 0),
+(249, 129, 2, 0),
+(250, 130, 2, 0),
+(251, 131, 2, 0),
+(252, 132, 2, 0),
+(253, 133, 2, 0),
+(259, 210, 2, 0),
+(260, 211, 2, 0),
+(261, 212, 2, 0),
+(262, 213, 2, 0),
+(263, 214, 2, 0),
+(264, 215, 2, 0),
+(265, 216, 2, 0),
+(266, 217, 2, 0),
+(267, 218, 2, 0),
+(268, 219, 2, 0),
+(269, 220, 2, 0),
+(270, 221, 2, 0),
+(271, 222, 2, 0),
+(272, 223, 2, 0),
+(273, 224, 2, 0),
+(274, 225, 2, 0),
+(275, 226, 2, 0),
+(276, 227, 2, 0),
+(277, 228, 2, 0),
+(278, 229, 2, 0),
+(279, 230, 2, 0),
+(280, 231, 2, 0),
+(281, 232, 2, 0),
+(282, 233, 2, 0),
+(288, 234, 2, 0),
+(289, 235, 2, 0),
+(290, 134, 1, 0),
+(291, 135, 1, 0),
+(292, 210, 1, 0),
+(293, 211, 1, 0),
+(294, 212, 1, 0),
+(295, 213, 1, 0),
+(296, 214, 1, 0),
+(297, 215, 1, 0),
+(298, 216, 1, 0),
+(299, 217, 1, 0),
+(300, 218, 1, 0),
+(301, 219, 1, 0),
+(302, 220, 1, 0),
+(303, 221, 1, 0),
+(304, 222, 1, 0),
+(305, 223, 1, 0),
+(306, 224, 1, 0),
+(307, 225, 1, 0),
+(308, 226, 1, 0),
+(309, 227, 1, 0),
+(310, 228, 1, 0),
+(311, 229, 1, 0),
+(312, 230, 1, 0),
+(313, 231, 1, 0),
+(314, 232, 1, 0),
+(315, 233, 1, 0),
+(316, 234, 1, 0),
+(317, 235, 1, 0),
+(318, 110, 3, 1),
+(320, 236, 1, 0),
+(322, 110, 3, 0),
+(323, 111, 3, 0),
+(324, 112, 3, 0),
+(325, 113, 3, 0),
+(326, 114, 3, 0),
+(327, 115, 3, 0),
+(328, 116, 3, 0),
+(329, 117, 3, 1),
+(330, 118, 3, 0),
+(331, 119, 3, 0),
+(332, 120, 3, 0),
+(333, 121, 3, 0),
+(334, 122, 3, 0),
+(335, 123, 3, 0),
+(336, 124, 3, 0),
+(337, 125, 3, 0),
+(338, 126, 3, 0),
+(339, 127, 3, 0),
+(340, 128, 3, 0),
+(341, 129, 3, 0),
+(342, 130, 3, 0),
+(343, 131, 3, 0),
+(344, 132, 3, 0),
+(345, 133, 3, 0),
+(346, 134, 3, 0),
+(347, 135, 3, 0),
+(348, 210, 3, 0),
+(349, 211, 3, 0),
+(350, 212, 3, 0),
+(351, 213, 3, 0),
+(352, 214, 3, 0),
+(353, 215, 3, 0),
+(354, 216, 3, 0),
+(355, 217, 3, 0),
+(356, 218, 3, 1),
+(357, 219, 3, 0),
+(358, 220, 3, 0),
+(359, 221, 3, 0),
+(360, 222, 3, 0),
+(361, 223, 3, 0),
+(362, 224, 3, 0),
+(363, 225, 3, 0),
+(364, 226, 3, 0),
+(365, 227, 3, 0),
+(366, 228, 3, 0),
+(367, 229, 3, 0),
+(368, 230, 3, 0),
+(369, 231, 3, 0),
+(370, 232, 3, 0),
+(371, 233, 3, 0),
+(372, 234, 3, 0),
+(373, 235, 3, 0);
 
 -- --------------------------------------------------------
 
@@ -182,7 +349,7 @@ CREATE TABLE `student` (
   `hostel_id` int(20) DEFAULT NULL,
   `room_id` int(10) DEFAULT NULL,
   `gender` int(2) DEFAULT NULL,
-  `mobile` varchar(20) DEFAULT NULL
+  `mobile` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -190,8 +357,11 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`student_id`, `f_name`, `l_name`, `year`, `dept`, `password`, `hostel_id`, `room_id`, `gender`, `mobile`) VALUES
-('123', 'ind', 'jith', '3', 'CSE', '789', NULL, NULL, 1, '987'),
-('b180501cs', 'muhammed', 'shifan p', '3', 'cse', '123', NULL, NULL, 1, NULL);
+('B180437CS', 'Mohammed', 'Ismail', '3', 'CSE', 'ismail', 3, 329, 1, '8769876781'),
+('B180476CS', 'Abid', 'Ali K P', '3', 'CSE', 'abid', NULL, NULL, 1, '8989767678'),
+('B180486CS', 'Indrajith', 'T S', '3', 'CSE', 'indrajith', 3, 356, 1, '8909876789'),
+('B180492CS', 'Fadi', 'Noushad', '3', 'CSE', 'fadi', NULL, NULL, 1, '8765980865'),
+('B180501CS', 'Muhammed', 'Shifan', '3', 'CSE', 'shifan', NULL, NULL, 1, '7654789098');
 
 --
 -- Indexes for dumped tables
@@ -240,6 +410,13 @@ ALTER TABLE `messages`
   ADD KEY `fk_messages_student_id` (`student_id`);
 
 --
+-- Indexes for table `mobile_number`
+--
+ALTER TABLE `mobile_number`
+  ADD PRIMARY KEY (`student_id`,`mobile`),
+  ADD UNIQUE KEY `mobile` (`mobile`);
+
+--
 -- Indexes for table `room`
 --
 ALTER TABLE `room`
@@ -268,31 +445,31 @@ ALTER TABLE `administrator`
 -- AUTO_INCREMENT for table `application`
 --
 ALTER TABLE `application`
-  MODIFY `application_no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `application_no` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `hostel`
 --
 ALTER TABLE `hostel`
-  MODIFY `hostel_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `hostel_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `hostel_manager`
 --
 ALTER TABLE `hostel_manager`
-  MODIFY `hm_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `hm_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `msg_id` int(10) NOT NULL AUTO_INCREMENT;
+  MODIFY `msg_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `room_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `room_id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=374;
 
 --
 -- Constraints for dumped tables
@@ -319,6 +496,12 @@ ALTER TABLE `hostel_manager`
 ALTER TABLE `messages`
   ADD CONSTRAINT `fk_messages_hm_id` FOREIGN KEY (`hm_id`) REFERENCES `hostel_manager` (`hm_id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_messages_student_id` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `mobile_number`
+--
+ALTER TABLE `mobile_number`
+  ADD CONSTRAINT `fk_mobile_number_student_id` FOREIGN KEY (`student_id`) REFERENCES `student` (`student_id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `room`
