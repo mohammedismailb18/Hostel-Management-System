@@ -57,7 +57,7 @@
             $result8 = mysqli_query($conn,$query8);
             $row8 = mysqli_fetch_assoc($result8);
             
-            if(is_null($row7['hostel_name'])) {
+            if(!isset($row7['hostel_name'])) {
                 $hostel_name = "not alloted";
                 $room_no = "not alloted";
             }
