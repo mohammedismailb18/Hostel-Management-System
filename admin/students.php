@@ -55,8 +55,16 @@
             $query8 = "SELECT * FROM room WHERE room_id = '$row6[room_id]'";
             $result8 = mysqli_query($conn,$query8);
             $row8 = mysqli_fetch_assoc($result8);
-         
-      		echo "<tr><td>{$name}</td><td>{$row6['student_id']}</td><td>{$row6['mobile']}</td><td>{$row7['hostel_name']}</td><td>{$row8['room_no']}</td></tr>\n";
+            
+            if($row7['hostel_name'] == NULL) {
+                $hostel_name = "not alloted";
+                $room_no = "not alloted";
+            }
+            else {
+                $hostel_name = $row7['hostel_name'];
+                $room_no = $row8['room_no'];
+            }
+      		echo "<tr><td>{$name}</td><td>{$row6['student_id']}</td><td>{$row6['mobile']}</td><td>{$hostel_name}</td><td>{$room_no}</td></tr>\n";
    	   }
    }
    ?>
