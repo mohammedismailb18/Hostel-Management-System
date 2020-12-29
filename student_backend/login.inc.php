@@ -6,8 +6,11 @@ if (isset($_POST['student-login'])) {
   $password = $_POST['pwd'];
 
   if (empty($roll) || empty($password)) {
-    header("Location: ../index.php?error=emptyfields");
-    exit();
+    echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Empty Feild');
+      window.location.href='../index.php';
+      </script>");
+      exit();
   }
   else {
     $sql = "SELECT *FROM student WHERE student_id = '$roll'";
@@ -42,12 +45,18 @@ if (isset($_POST['student-login'])) {
         exit();
       }
       else {
-        header("Location: ../index.php?error=strangeerr");
-        exit();
+        echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Password is incorrect');
+      window.location.href='../index.php';
+      </script>");
+      exit();
       }
     }
     else{
-      header("Location: ../index.php?error=nouser");
+      echo ("<script LANGUAGE='JavaScript'>
+      window.alert('No user exist');
+      window.location.href='../index.php';
+      </script>");
       exit();
     }
   }

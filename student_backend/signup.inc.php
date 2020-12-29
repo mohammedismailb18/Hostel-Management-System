@@ -20,6 +20,7 @@ if (isset($_POST['signup-student'])) {//
         window.alert('Empty Feilds!!');
         window.location.href='../index_signup.php';
         </script>");
+        exit();
   }
   else {
     if($confpassword!=$password)
@@ -29,6 +30,14 @@ if (isset($_POST['signup-student'])) {//
       window.alert('Passwords not matching');
       window.location.href='../index_signup.php';
       </script>");
+      exit();
+    }
+    if(substr($student_id,0,1) != "B" || !is_numeric(substr($student_id,1,6)) || !is_string(substr($student_id,-2,2)) ) {
+      echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Enter proper Roll No');
+      window.location.href='../index_signup.php';
+      </script>");
+      exit();
     }
 
     $sql = "SELECT* FROM student WHERE student_id = '$student_id';";
@@ -40,9 +49,17 @@ if (isset($_POST['signup-student'])) {//
         window.alert('User Already exist');
         window.location.href='../index_signup.php';
         </script>");
+          exit();
       } 
     }
 
+    if(substr($student_id,0,1) != "B" || !is_numeric(substr($student_id,1,6)) || !is_string(substr($student_id,-2,2)) ) {
+      echo ("<script LANGUAGE='JavaScript'>
+      window.alert('Enter proper Roll No');
+      window.location.href='../index_signup.php';
+      </script>");
+      exit();
+    }
     $sql = "INSERT INTO student VALUES ('$student_id','$f_name', '$l_name', '$year','$dept', '$password', NULL ,NULL,$gender,'$mobile');";
     $result = mysqli_query($conn, $sql);
     if($result) {
@@ -50,12 +67,14 @@ if (isset($_POST['signup-student'])) {//
       window.alert('Your account created Successfully');
       window.location.href='../index.php';
       </script>");
+      exit();
     }
     else {
       echo ("<script LANGUAGE='JavaScript'>
       window.alert('Sign up error Please try agin Later');
       window.location.href='../index_signup.php';
       </script>");
+      exit();
     }
   }
 }
