@@ -5,9 +5,16 @@ Hostel management system created as part of DBMS course (CS3002D)
 
 ## Project Demo
 
+
 ### Student Module
 ![Alt Text](https://github.com/mohammedismailb18/Hostel-Management-System/blob/main/gif/student.gif)
 
+
 ### Hostel Manager Module
 ![Alt Text](https://github.com/mohammedismailb18/Hostel-Management-System/blob/main/gif/hostel-manager.gif)
+
+
+### Hostel Manager Module
+![Alt Text](https://github.com/mohammedismailb18/Hostel-Management-System/blob/main/gif/hostel-admin.gif)
+
 
