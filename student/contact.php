@@ -77,7 +77,12 @@ if(isset($_POST['submit'])){
 	$query = "INSERT INTO messages (hm_id,student_id,subject,message,time_stamp,sender) VALUES ('$hm_id','$roll','$subject','$message','$time_stamp','1')";
     $result = mysqli_query($conn,$query);
     if($result){
-         echo "<script type='text/javascript'>alert('Message sent Successfully!')</script>";
+         echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Message sent to hostel manager Successfully!');
+        window.location.href='home.php';
+        </script>");
+        exit();
+         
     }
     else{
          echo "<script type='text/javascript'>alert('Error in sending message!!! Please try again.')</script>";

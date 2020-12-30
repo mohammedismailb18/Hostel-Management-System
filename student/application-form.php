@@ -136,8 +136,11 @@
         $query = "INSERT INTO application (student_id,room_id,hm_id,message,status) VALUES ('$student_id','$room_id','$hm_id','$message','0')";
         $result = mysqli_query($conn,$query);
         if($result){
-         echo "<script type='text/javascript'>alert('Application sent Successfully!')</script>";
-         exit();
+         echo ("<script LANGUAGE='JavaScript'>
+        window.alert('Application sent Successfully!');
+        window.location.href='home.php';
+        </script>");
+        exit();
         }
         else{
             echo "<script type='text/javascript'>alert('Error in sending Application!!! Please try again.')</script>";

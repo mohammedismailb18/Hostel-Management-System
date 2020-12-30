@@ -9981,7 +9981,7 @@ h3.title-big {
   -ms-transition: 0.3s ease-in; }
 
 .w3l-main-slider .banner-view {
-  background: url(../images/slide1.jpg) no-repeat center;
+  background: url(../images/slide2.jpg) no-repeat center;
   background-size: cover;
   min-height: 700px;
   position: relative;
@@ -9990,7 +9990,7 @@ h3.title-big {
   align-items: center; }
 
 .w3l-main-slider .banner-top1 {
-  background: url(../images/slide2.jpg) no-repeat center;
+  background: url(../images/slide1.jpg) no-repeat center;
   background-size: cover; }
 
 .w3l-main-slider .banner-top2 {
